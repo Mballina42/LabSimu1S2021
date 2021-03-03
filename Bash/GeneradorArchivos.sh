@@ -1,9 +1,12 @@
 #!/bin/bash
 
-#Autor: Maynor Ballina
-#Tipo:  Script de Bash
-#Ejecutar:  ./GerneradorArchivo.sh
-#Resumen:   Generador automatico de comentarios para scripts de C.
+: << 'Header'
+Autor:              Maynor Ballina
+Fecha:              02-03-2021
+Tipo de archivo:    Script de Bash
+Para ejecutar:      ./GerneradorArchivo.sh
+Resumen:            Generador automatico de comentarios para scripts de C.
+Header
 
 #bienvenida
 echo "* * * * Generador de archivos de C * * * * "
@@ -18,7 +21,7 @@ fi
 autor=$(whoami)
 fecha=$(date)
 version=$(gcc --version | head -n 1)
-#crear nuestro contenido
+#crear nuestro contenido dentro del archivo .c
 echo "/*" > $fnombre
 echo "Autor: " $autor >> $fnombre
 echo "compilador: " $version >> $fnombre
