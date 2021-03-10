@@ -23,10 +23,11 @@ fecha=$(date)
 version=$(gcc --version | head -n 1)
 #crear nuestro contenido dentro del archivo .c
 echo "/*" > $fnombre
-echo "Autor: " $autor >> $fnombre
+echo "Autor:    Maynor Ballina" >> $fnombre
+echo "Fecha: " $fecha >> $fnombre
 echo "compilador: " $version >> $fnombre
 echo Para Compilar: gcc -o $nombre $fnombre >> $fnombre
-echo "Fecha: " $fecha >> $fnombre
+echo "Version: 1.0" >> $fnombre
 echo "librerias: stdio (u otras)" >> $fnombre
 echo "Resumen, Entradasm Salidas" >> $fnombre
 echo "*/" >> $fnombre
